@@ -1,5 +1,5 @@
 import ErrorSVG from "./ErrorSVG";
-const ErrorComponent = () => {
+const ErrorComponent = (error: any) => {
     return (
         <div>
             <ErrorSVG />
