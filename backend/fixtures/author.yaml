@@ -3,3 +3,4 @@ App\Entity\Author:
     firstName: <name()>
     lastName: <name()>
     bibliography: <text()>
+    books: ["@book*", "@book*"]

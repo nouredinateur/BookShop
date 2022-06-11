@@ -7,31 +7,41 @@ use App\Repository\BookRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
-#[ApiResource]
+#[ApiResource(
+    normalizationContext: ['groups' => ['book']],
+)]
 class Book
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    #[Groups(['book'])]
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['book'])]
     private $title;
 
+    #[Groups(['book'])]
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $description;
 
     #[ORM\Column(type: 'date', nullable: true)]
+    #[Groups(['book'])]
     private $publicationDate;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['book'])]
     private $genre;
 
     #[ORM\ManyToOne(targetEntity: Author::class, inversedBy: 'books')]
+    #[Groups(['book'])]
     private $author;
 
+    #[Groups(['book'])]
     #[ORM\OneToMany(mappedBy: 'book', targetEntity: Review::class)]
     private $reviews;
 

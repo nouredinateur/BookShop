@@ -17,8 +17,8 @@ const BooksDetailsScreen = () => {
 
     console.log(books["hydra:member"])
     return (
-        <div>
-            {isSuccess && books["hydra:member"]?.map((book) => {
+        <div className='grid gap-4 grid-cols-3 grid-rows-3 w-full flex ml-16 '>
+            {isSuccess && books["hydra:member"]?.map((book: any) => {
                 return (
                     <BookCardComponent key={book.id} book={book} />
                 )

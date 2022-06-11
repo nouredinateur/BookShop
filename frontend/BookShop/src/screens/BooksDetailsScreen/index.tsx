@@ -1,5 +1,4 @@
 
-
 const BooksDetailsScreen = () => {
     return (
         <div>

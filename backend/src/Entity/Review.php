@@ -5,26 +5,34 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\ReviewRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: ReviewRepository::class)]
-#[ApiResource]
+#[ApiResource(
+    normalizationContext: ['groups' => ['review']],
+)]
 class Review
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    #[Groups(['review'])]
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['review', 'book'])]
     private $fullName;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['review'])]
     private $email;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['review', 'book'])]
     private $comment;
 
     #[ORM\Column(type: 'date', nullable: true)]
+    #[Groups(['review'])]
     private $creationDate;
 
     #[ORM\ManyToOne(targetEntity: Book::class, inversedBy: 'reviews')]
