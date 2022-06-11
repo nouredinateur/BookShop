@@ -1,0 +1,5 @@
+App\Entity\Author:
+  author_{1..20}:
+    firstName: <name()>
+    lastName: <name()>
+    bibliography: <text()>

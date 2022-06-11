@@ -1,0 +1,7 @@
+App\Entity\Book:
+  book_{1..20}:
+    title: <sentence(4)>
+    description: <text()>
+    genre: <text()>
+    publicationDate: <dateTime()>
+    author: "@author*"

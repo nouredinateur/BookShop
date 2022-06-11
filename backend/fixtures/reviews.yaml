@@ -1,0 +1,7 @@
+App\Entity\Review:
+  review_{1..20}:
+    fullName: <name()>
+    email: <email()>
+    comment: <text()>
+    creationDate: <dateTime()>
+    book: "@book*"
