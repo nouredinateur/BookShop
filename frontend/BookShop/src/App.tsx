@@ -1,10 +1,8 @@
-import logo from './logo.svg'
-import './App.css'
-import BooksListScreen from './screens/BooksListScreen'
+import logo from "./logo.svg";
+import "./App.css";
+import BooksListScreen from "./screens/BooksListScreen";
 function App() {
-  return (
-    <BooksListScreen />
-  )
+  return <BooksListScreen />;
 }
 
-export default App
+export default App;

@@ -1,5 +1,5 @@
-import * as React from "react"
-import { SVGProps } from "react"
+import * as React from "react";
+import { SVGProps } from "react";
 
 const ErrorSVG = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -145,6 +145,6 @@ const ErrorSVG = (props: SVGProps<SVGSVGElement>) => (
       <path d="M1034.66 236.01h2v51.98h-2zM921.46 406.31l-1.1-1.67c6.78-4.48 14.03-8.83 14.1-8.88l1.03 1.71c-.08.06-7.28 4.39-14.03 8.84zM922.46 425.01l-1.05-1.7c7-4.3 14.75-8.85 14.83-8.89l1.01 1.72c-.07.04-7.81 4.58-14.79 8.87zM925.15 444.11l-.98-1.74c5.42-3.07 12.05-6.64 12.11-6.67l.95 1.76c-.07.04-6.68 3.6-12.08 6.65zM808.78 383.69l-1.73-.99a13.82 13.82 0 0 0 1.82-6.85v-15.57h2v15.57c-.01 2.74-.73 5.46-2.09 7.84zM789.45 382.65l-1.86-.73c.62-1.6.94-3.29.94-5.02v-16.74h2v16.74c0 1.99-.37 3.92-1.08 5.75zM768.36 382.97l-1.77-.94c1.05-1.98 1.6-4.21 1.6-6.46v-14.79h2v14.79c.01 2.58-.62 5.14-1.83 7.4zM943.9 245.43h2v126.3h-2zM943.9 466.9h2v126.3h-2z" />
     </g>
   </svg>
-)
+);
 
-export default ErrorSVG
+export default ErrorSVG;

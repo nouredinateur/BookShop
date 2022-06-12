@@ -5,4 +5,4 @@ App\Entity\Book:
     genre: <sentence(1)>
     publicationDate: <dateTime()>
     author: "@author*"
-    reviews: ["@review*", "@review*", "@review*"]
+    reviews: ["@review*", "@review*", "@review*", "@review*", "@review*"]
