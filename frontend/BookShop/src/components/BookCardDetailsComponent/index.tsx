@@ -3,7 +3,6 @@ import ReviewComponent from "../ReviewComponent";
 const BookCardDetailsComponent = ({ book }: any) => {
   const { id, title, author, genre, description, publicationDate, reviews } =
     book as IBookCardDetailsComponentProps;
-  console.log(id);
   return (
     <>
       <div
