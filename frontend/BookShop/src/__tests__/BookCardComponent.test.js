@@ -1,8 +1,9 @@
-import { render, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import BookCardComponent from "../components/BookCardComponent";
+import "@testing-library/jest-dom";
 
-const book = [
-  {
+it("should renders card properly", () => {
+  const book = {
     id: 21,
     title: "Est quia assumenda.",
     description:
@@ -13,14 +14,10 @@ const book = [
       firstName: "Rubie Howe",
       lastName: "Marianne Weimann IV",
     },
-  },
-];
+  };
 
-test("should render book ", function () {
-  // content of our test with here
   render(<BookCardComponent book={book} />);
-});
-
-it("a simple test with arrow function", () => {
-  // content of our test with here
+  const id = screen.getByTestId("21");
+  expect(id).toBeInTheDocument();
+  expect(genre).toBeInTheDocument();
 });
