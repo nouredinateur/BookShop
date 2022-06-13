@@ -19,5 +19,4 @@ it("should renders card properly", () => {
   render(<BookCardComponent book={book} />);
   const id = screen.getByTestId("21");
   expect(id).toBeInTheDocument();
-  expect(genre).toBeInTheDocument();
 });
